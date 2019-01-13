@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # /game
+  resources :game, only: %i[show create] do
+    get :calculate, action: :calculate
+  end
+
+  # /question
+  resources :question, only: %i[show]
+
+  # /game-question
+  resources :game_question, path: '/game-question', only: %i[update]
 end

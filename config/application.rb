@@ -18,9 +18,6 @@ Bundler.require(*Rails.groups)
 
 module GamaGame
   class Application < Rails::Application
-    # Define API mode:
-    config.api_only = true
-
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
@@ -30,5 +27,8 @@ module GamaGame
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Define API mode:
+    config.api_only = true
   end
 end
