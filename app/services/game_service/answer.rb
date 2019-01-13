@@ -3,14 +3,15 @@ module GameService
     class << self
       def perform(options = {})
         @options = options
-        subject.try(:assign_attributes, answer: @options[:answer])
-        subject
+        game_question = find_game_question
+        game_question.try(:assign_attributes, answer: @options[:answer])
+        game_question
       end
 
       private
 
-      def subject
-        @subject ||= GameQuestion.includes(:question).find_by(id: @options[:id])
+      def find_game_question
+        GameQuestion.includes(:question).find_by(id: @options[:id])
       end
     end
   end

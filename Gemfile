@@ -12,15 +12,25 @@ gem 'sass-rails', '~> 5.0'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'uglifier', '>= 1.3.0'
 
-# CORS Origin:
+# CORS:
 gem 'rack-cors', require: 'rack/cors'
 
-# Database postgresql:
+# Database:
 gem 'pg', '~> 0.21'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
+
+  # Linter
+  gem 'rubocop'
+
+  # Data
+  gem 'factory_bot_rails'
+  gem 'faker'
+
+  # Coverage
+  gem 'simplecov'
 end
 
 group :development do

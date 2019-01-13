@@ -8,12 +8,8 @@ class GameController < ApplicationController
   end
 
   def create
-    if creator.valid?
-      creator.save!
-      render json: creator.as_json(include: :game_questions), status: :created
-    else
-      render json: creator.errors.as_json, status: :unprocessable_entity
-    end
+    creator.save!
+    render json: creator.as_json(include: :game_questions), status: :created
   end
 
   def calculate

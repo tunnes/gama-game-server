@@ -14,7 +14,7 @@ module GameService
             SELECT COUNT(*) AS score
             FROM game_questions
             INNER JOIN questions
-                  ON questions.id = game_questions.id
+                  ON questions.id = game_questions.question_id
                   AND questions.answer = game_questions.answer
                   AND game_questions.game_id = #{@game.id}
           SQL
