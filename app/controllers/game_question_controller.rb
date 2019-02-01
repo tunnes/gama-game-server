@@ -2,8 +2,7 @@ class GameQuestionController < ApplicationController
   def update
     if answer.blank?
       render json: nil, status: :not_found
-    elsif answer.valid?
-      answer.save!
+    elsif answer.save
       render json: answer.as_json, status: :ok
     else
       render json: answer.errors.as_json, status: :unprocessable_entity

@@ -107,7 +107,7 @@ Expect an answer params, update the game question and return the game question i
 Even with the long time to develop the challenge, I leave below some items that
 I consider important but have not had time to solve:
 - [ ] Search and remove from the app more elements related to views and assets.
-- [ ] Think in something about the complex query in calculator service.
+- [x] Think in something about the complex query in calculator service.
 - [ ] Create versions to API resources.
 - [ ] Remodel the table of questions, it does not follow the standards of normalization.
 - [ ] Add a record serealizador.

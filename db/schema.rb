@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20190112205954) do
   create_table "games", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "score", default: 0
   end
 
   create_table "questions", force: :cascade do |t|
